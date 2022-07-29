@@ -5,6 +5,12 @@ import { useNavigate } from 'react-router-dom';
 function SignIn() {
   const navigate = useNavigate();
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    navigate('/main');
+  };
+
   return (
     <div className='container-sign-in'>
       <img src={Logo} alt="logo" className='logo' />
@@ -16,7 +22,7 @@ function SignIn() {
           <button className='btn-purple btn-big' onClick={() => navigate('/sign-up')}>Cadastre-se</button>
         </div>
         <div className='right'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <h2>Login</h2>
             <div className='container-inputs'>
               <label htmlFor='email'>E-mail</label>
