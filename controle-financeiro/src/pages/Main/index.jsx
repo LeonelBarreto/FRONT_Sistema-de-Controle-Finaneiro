@@ -1,9 +1,13 @@
 import './styles.css';
+import Header from '../../components/Header';
 
 function Main() {
     return (
         <div className='container-main'>
-            <h1>Main</h1>
+            <Header />
+            <section>
+                
+            </section>
         </div>
     );
 };
